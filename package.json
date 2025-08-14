@@ -1,0 +1,43 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "pull": "drizzle-kit pull"
+  },
+  "dependencies": {
+    "@libsql/client": "^0.15.9",
+    "@nuxt/ui-pro": "3.1.1",
+    "@tauri-apps/plugin-os": "~2.3.0",
+    "@tauri-apps/plugin-process": "~2.3.0",
+    "@tauri-apps/plugin-updater": "~2.9.0",
+    "@trpc/client": "^11.4.3",
+    "@trpc/server": "^11.4.3",
+    "cheerio": "^1.1.2",
+    "dayjs": "^1.11.13",
+    "dotenv": "^16.5.0",
+    "drizzle-orm": "^0.44.2",
+    "drizzle-zod": "^0.8.2",
+    "mysql2": "^3.14.3",
+    "nuxt": "^3.17.2",
+    "nuxt-auth-utils": "^0.5.23",
+    "trpc-nuxt": "^1.2.0",
+    "vue": "^3.5.13",
+    "vue-router": "^4.5.1"
+  },
+  "resolutions": {
+    "unimport": "4.1.1"
+  },
+  "devDependencies": {
+    "@iconify-json/foundation": "^1.2.1",
+    "@iconify-json/lucide": "^1.2.57",
+    "@tauri-apps/cli": "^2.7.1",
+    "drizzle-kit": "^0.31.1",
+    "tsx": "^4.20.3"
+  }
+}
