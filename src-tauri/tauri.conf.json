@@ -1,0 +1,56 @@
+{
+  "$schema": "../node_modules/@tauri-apps/cli/config.schema.json",
+  "productName": "xxdl-housing",
+  "version": "0.0.3",
+  "identifier": "xyz.xxdl.house",
+  "build": {
+    "frontendDist": "../.output/public",
+    "devUrl": "http://localhost:3000",
+    "beforeDevCommand": "pnpm dev",
+    "beforeBuildCommand": "pnpm generate"
+  },
+  "plugins": {
+    "updater": {
+        "windows": {
+        "installMode": "passive"
+      },
+      "active": true,
+      "dangerousInsecureTransportProtocol": true,
+      "endpoints": [
+        "https://api.upgrade.toolsetlink.com/v1/tauri/upgrade?tauriKey=IyBJC5--fLXGFwU6h20DgA&versionName={{current_version}}&appointVersionName=&devModelKey=&devKey=&target={{target}}&arch={{arch}}"
+      ],
+      "dialog": false,
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDlDQzZGOTQyRkMxQ0ZEQUEKUldTcS9SejhRdm5Hbk4xZ2tWNG1jTVlkdkJBQ1Q0eGxvalVoUGlDdEwwMExPaEVUMlM4WmZTUDcK"
+    }
+  },
+  "app": {
+    "windows": [
+      {
+        "title": "58工具",
+        "width": 1200,
+        "height": 600,
+        "resizable": true,
+        "fullscreen": false
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "createUpdaterArtifacts": true,
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ],
+    "windows": {
+      "wix": {
+        "language": "zh-CN"
+      }
+    }
+  }
+}
